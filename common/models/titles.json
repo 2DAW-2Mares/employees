@@ -10,11 +10,11 @@
   "properties": {
     "emp_no": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
-      "id": 1,
       "mysql": {
         "columnName": "emp_no",
         "dataType": "int",
@@ -26,11 +26,11 @@
     },
     "title": {
       "type": "String",
+      "id": 2,
       "required": true,
       "length": 50,
       "precision": null,
       "scale": null,
-      "id": 2,
       "mysql": {
         "columnName": "title",
         "dataType": "varchar",
@@ -42,11 +42,11 @@
     },
     "from_date": {
       "type": "Date",
+      "id": 3,
       "required": true,
       "length": null,
       "precision": null,
       "scale": null,
-      "id": 3,
       "mysql": {
         "columnName": "from_date",
         "dataType": "date",
@@ -71,5 +71,15 @@
         "nullable": "Y"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {
+    "employee": {
+      "type": "belongsTo",
+      "model": "employees",
+      "foreignKey": "emp_no"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }

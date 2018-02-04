@@ -10,11 +10,11 @@
   "properties": {
     "emp_no": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
-      "id": 1,
       "mysql": {
         "columnName": "emp_no",
         "dataType": "int",
@@ -99,5 +99,42 @@
         "nullable": "N"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {
+    "departments": {
+      "type": "hasMany",
+      "model": "departments",
+      "foreignKey": "emp_no",
+      "through": "dept_emp"
+    },
+    "jefaturas": {
+      "type": "hasMany",
+      "model": "departments",
+      "foreignKey": "emp_no",
+      "through": "dept_manager"
+    },
+    "salaries": {
+      "type": "hasMany",
+      "model": "salaries",
+      "foreignKey": "emp_no"
+    },
+    "titles": {
+      "type": "hasMany",
+      "model": "titles",
+      "foreignKey": "emp_no"
+    },
+    "deptEmployees": {
+      "type": "hasMany",
+      "model": "dept_emp",
+      "foreignKey": "emp_no"
+    },
+    "deptManagers": {
+      "type": "hasMany",
+      "model": "dept_manager",
+      "foreignKey": "emp_no"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }

@@ -10,11 +10,11 @@
   "properties": {
     "dept_no": {
       "type": "String",
+      "id": 1,
       "required": true,
       "length": 4,
       "precision": null,
       "scale": null,
-      "id": 1,
       "mysql": {
         "columnName": "dept_no",
         "dataType": "char",
@@ -39,5 +39,32 @@
         "nullable": "N"
       }
     }
-  }
+  },
+  "validations": [],
+  "relations": {
+    "employees": {
+      "type": "hasMany",
+      "model": "employees",
+      "foreignKey": "dept_no",
+      "through": "dept_emp"
+    },
+    "jefes": {
+      "type": "hasMany",
+      "model": "employees",
+      "foreignKey": "dept_no",
+      "through": "dept_manager"
+    },
+    "deptEmployees": {
+      "type": "hasMany",
+      "model": "dept_emp",
+      "foreignKey": "dept_no"
+    },
+    "deptManagers": {
+      "type": "hasMany",
+      "model": "dept_manager",
+      "foreignKey": "dept_no"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }
