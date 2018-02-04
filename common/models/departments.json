@@ -1,0 +1,43 @@
+{
+  "name": "departments",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "employees",
+      "table": "departments"
+    }
+  },
+  "properties": {
+    "dept_no": {
+      "type": "String",
+      "required": true,
+      "length": 4,
+      "precision": null,
+      "scale": null,
+      "id": 1,
+      "mysql": {
+        "columnName": "dept_no",
+        "dataType": "char",
+        "dataLength": 4,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    },
+    "dept_name": {
+      "type": "String",
+      "required": true,
+      "length": 40,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "dept_name",
+        "dataType": "varchar",
+        "dataLength": 40,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    }
+  }
+}

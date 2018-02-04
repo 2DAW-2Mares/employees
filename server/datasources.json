@@ -1,0 +1,12 @@
+{
+  "employees": {
+    "host": "localhost",
+    "port": 0,
+    "url": "",
+    "database": "employees",
+    "password": "alumno",
+    "name": "employees",
+    "user": "alumno",
+    "connector": "mysql"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "employees": {
+    "dataSource": "employees",
+    "public": true
+  },
+  "departments": {
+    "dataSource": "employees",
+    "public": true
+  },
+  "salaries": {
+    "dataSource": "employees",
+    "public": true
+  },
+  "titles": {
+    "dataSource": "employees",
+    "public": true
+  },
+  "dept_emp": {
+    "dataSource": "employees",
+    "public": true
+  },
+  "dept_manager": {
+    "dataSource": "employees",
+    "public": true
+  }
+}
